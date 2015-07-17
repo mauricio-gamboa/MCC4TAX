@@ -1,5 +1,5 @@
 <div id="contact-form">
-  <h2 class="star-title">How can I help you?</h2>
+  <h2 class="site-subtitle">How can I help you?</h2>
 
   <p><strong>You can contact us using this form day or night, 24 hours a day, 7 days a week, 365 days a
     year.</strong> You will hear back from one of our attorneys the same day or next day.</p>

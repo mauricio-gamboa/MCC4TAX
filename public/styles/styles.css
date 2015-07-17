@@ -178,21 +178,6 @@ h6 {
   font-weight: normal;
   font-family: 'Lato-Bold';
 }
-.star-title {
-  background: url('../images/bg-star-title.png') no-repeat 50% 100%;
-  font-size: 32px;
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 35px;
-  color: #1b3e86;
-  margin: 0 0 50px 0;
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .star-title {
-    font-size: 26px;
-    margin: 0 0 30px 0;
-  }
-}
 .divider {
   height: 2px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -424,21 +409,22 @@ Main Menu Styles
   color: white;
   border-color: white;
 }
-.main-menu li.sub-menu {
+.main-menu li.menu-item-has-children {
   position: relative;
 }
-.main-menu li.sub-menu:hover > ul {
+.main-menu li.menu-item-has-children:hover > ul {
   display: block;
 }
-.main-menu li.sub-menu > a {
+.main-menu li.menu-item-has-children > a {
   background: url('../images/arrow-2.png') no-repeat 92% 50%;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .main-menu li.sub-menu > a {
+  .main-menu li.menu-item-has-children > a {
     background-position: 95% 50%;
   }
 }
-.main-menu li.sub-menu ul {
+.main-menu li.menu-item-has-children .sub-menu {
+  list-style: none;
   display: none;
   margin: 0;
   position: absolute;
@@ -446,16 +432,16 @@ Main Menu Styles
   left: 0;
   background-color: #1a388a;
   width: 100%;
-  padding-top: 62px;
+  padding: 62px 0 0 0;
 }
-.main-menu li.sub-menu ul li {
+.main-menu li.menu-item-has-children .sub-menu li {
   float: none;
   border-bottom: 1px solid #314c96;
 }
-.main-menu li.sub-menu ul li:last-child {
+.main-menu li.menu-item-has-children .sub-menu li:last-child {
   border-bottom: none;
 }
-.main-menu li.sub-menu ul li a {
+.main-menu li.menu-item-has-children .sub-menu li a {
   text-transform: capitalize;
   padding: 0 25px;
   height: 42px;
@@ -1388,6 +1374,8 @@ Footer Styles
 }
 #footer .footer-menus > ul > li ul {
   margin: 0;
+  list-style: none;
+  padding: 0;
 }
 @media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   #footer .footer-menus > ul > li ul {
