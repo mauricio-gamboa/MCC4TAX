@@ -1,51 +1,49 @@
+<?php $locations = get_my_post_type('location', 2); ?>
+
+<?php if($locations): ?>
 <section id="locations" class="site-padding white-bg">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <h2 class="site-title">Locations</h2>
       </div>
+      
+      <?php foreach ( $locations as $key=>$post ) : setup_postdata( $post ); ?>
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <div class="location clearfix">
-          <div><img src="<?php bloginfo('template_directory'); ?>/public/images/location-1.png" alt=""/></div>
+          <div><?php the_post_thumbnail( array(170, 170) ); ?></div>
           <div>
             <h4 class="site-subtitle clearfix">
-              <img src="<?php bloginfo('template_directory'); ?>/public/images/location-1-1.png" alt=""/>
-              Rochester
-              <span>new york</span>
+              <?php if(get_field('location_silhouette')): ?>
+              <?php $image = get_field('location_silhouette'); ?>
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+              <?php endif; ?>
+              
+              <?php the_title(); ?>
+              
+              <?php if(get_field('location_state')): ?>
+              <span><?php the_field('location_state'); ?></span>
+              <?php endif; ?>
             </h4>
+
+            <?php if(get_field('location_address')): ?>
             <address>
               <span class="marker-icon"><i class="fa fa-map-marker"></i></span>
-
-              <p>7825 Fay Avenue, Suite 200</p>
-
-              <p>La Jolla, CA. 92037</p>
+              <?php the_field('location_address'); ?>
             </address>
-            <p class="phone"><span><i class="fa fa-phone"></i></span> 415-493-8677</p>
-            <a class="my-btn btn-1" href="">Office Details <i class="fa fa-arrow-right"></i></a>
+            <?php endif; ?>
+
+            <?php if(get_field('location_phone')): ?>
+            <p class="phone"><span><i class="fa fa-phone"></i></span> <?php the_field('location_phone'); ?></p>
+            <?php endif; ?>
+            
+            <a class="my-btn btn-1" href="<?php the_permalink(); ?>">Office Details <i class="fa fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        <div class="location clearfix last">
-          <div><img src="<?php bloginfo('template_directory'); ?>/public/images/location-2.png" alt=""/></div>
-          <div>
-            <h4 class="site-subtitle clearfix">
-              <img src="<?php bloginfo('template_directory'); ?>/public/images/location-2-1.png" alt=""/>
-              Syracuse
-              <span>new york</span>
-            </h4>
-            <address>
-              <span class="marker-icon"><i class="fa fa-map-marker"></i></span>
+      <?php endforeach; wp_reset_postdata(); ?>
 
-              <p>7825 Fay Avenue, Suite 200</p>
-
-              <p>La Jolla, CA. 92037</p>
-            </address>
-            <p class="phone"><span><i class="fa fa-phone"></i></span> 415-493-8677</p>
-            <a class="my-btn btn-1" href="">Office Details <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
+<?php endif; ?>
