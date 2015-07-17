@@ -1090,18 +1090,18 @@ Badges Styles
     margin-top: 0;
   }
 }
-.my-form img {
+.my-form img:not(.ajax-loader) {
   float: right;
   margin-top: 23px;
   height: 48px;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
-  .my-form img {
+  .my-form img:not(.ajax-loader) {
     width: 160px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
-  .my-form img {
+  .my-form img:not(.ajax-loader) {
     float: none;
     margin: 5px auto 0 auto;
     display: block;
