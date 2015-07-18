@@ -595,7 +595,8 @@ Main Menu Styles
       }
     }
 
-    &.current-menu-item {
+    &.current-menu-item,
+    &.current-menu-parent {
       a {
         color: white;
         border-color: white;
@@ -1368,8 +1369,10 @@ Locations Styles
 
 #header-location {
 
-  &.location-1 {
-    background: url("../images/bg-location-1.png") no-repeat 50% 0 / cover;
+  &.location-header {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
   }
 
   .header-location {
@@ -2167,9 +2170,24 @@ About Page Styles
       }
 
       .map-wrapper {
-        img {
-          width: 100%;;
+        .border(2px, white);
+        height: 200px;
+        
+        map, div[map] {
+          display:block; 
+          height: 100% !important;
         }
+        
+        .fill {
+          height:100% !important;
+        }
+      }
+    }
+
+    &.list {
+      > ul {
+        padding: 0;
+        list-style: none;
       }
     }
 
