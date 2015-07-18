@@ -1331,6 +1331,22 @@ Badges Styles
     }
   }
 
+  .comment-reply-title,
+  p {
+    font-family: @helvetica;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    
+    a {
+      color: @green-1;
+
+      &:hover {
+        color: @green-1;
+      }
+    }
+  }
+
   .form-group {
     margin-bottom: 10px;
 
@@ -2139,7 +2155,9 @@ About Page Styles
     }
 
     ul {
+      list-style: outside none none;
       margin: 0;
+      padding: 0;
 
       li {
         line-height: normal;
@@ -2212,11 +2230,15 @@ About Page Styles
 
         > img {
           width: 69px;
+          height: 69px;
           margin-right: 10px;
           margin-bottom: 15px;
         }
 
         > div {
+          float: none;
+          width: auto;
+          
           p {
             font-size: 14px;
             line-height: 20px;
@@ -2233,7 +2255,7 @@ About Page Styles
       }
     }
 
-    &.archive {
+    &.widget_archive {
       ul {
         margin: 0 -30px;
 
@@ -2502,6 +2524,22 @@ Blog Styles
   }
 
   > div {
+    float: left;
+    width: 552px;
+
+    @media @medium {
+      width: 418px;
+    }
+
+    @media @small {
+      width: 283px;
+    }
+
+    @media @xs {
+      float: none;
+      width: auto;
+    }
+    
     h3 {
       color: @gray-8;
       font-size: 21px;
@@ -2547,20 +2585,49 @@ Blog Styles
   margin-top: 35px;
   padding-top: 35px;
 
-  .pagination {
-    margin: 0;
+  &:empty {
+    display: none;
+  }
 
-    li {
-      a {
+  .navigation {
+    h2 {
+      display: none;
+    }
+
+    .nav-links {
+      text-align: center;
+      
+      .page-numbers {
         font-family: 'Lato-Regular';
         border-radius: 4px;
         color: @green-1;
         .border(1px, @gray-19);
         line-height: 32px;
         padding: 0 15px;
-        display: block;
+        display: inline-block;
         margin: 0 5px;
         font-size: 17px;
+
+        &.current {
+          color: white;
+          background-color: @green-1;
+
+          &:hover {
+            .border(1px, @gray-19);
+          }
+
+          i {
+            vertical-align: middle;
+          }
+        }
+
+        &.dots {
+          &:hover {
+            background: white;
+            color: @green-1;
+            .border(1px, @gray-19);
+          }
+        }
 
         @media @small {
           padding: 0 12px;
@@ -2573,34 +2640,6 @@ Blog Styles
         &:hover {
           color: white;
           background-color: @green-1;
-        }
-      }
-
-      &.active {
-        a {
-          color: white;
-          background-color: @green-1;
-
-          &:hover {
-            .border(1px, @gray-19);
-          }
-
-          i {
-            vertical-align: middle;
-          }
-        }
-      }
-
-      &.ell {
-        a {
-          margin: 0;
-          padding: 0 5px;
-          .border(1px, transparent);
-
-          &:hover {
-            background: none;
-            color: @green-1;
-          }
         }
       }
     }
@@ -2616,7 +2655,7 @@ Blog Detail Styles
 .detail-section {
   margin-top: 40px;
 
-  > h4 {
+  h4 {
     font-size: 19px;
     color: @blue-6;
     text-transform: uppercase;
@@ -2635,23 +2674,17 @@ Blog Detail Styles
 
 .related-posts {
   .article {
-    float: left;
-    width: 50%;
     border-bottom: none;
     margin: 0;
     padding: 0;
 
     &:first-child {
       padding-right: 30px;
-
-      @media @xs {
-        padding-right: 0;
-      }
     }
 
-    @media @xs {
+    > div {
       float: none;
-      width: 100%;
+      width: auto;
     }
 
     h3 {
@@ -2661,6 +2694,7 @@ Blog Detail Styles
 
     img {
       width: 69px;
+      height: 69px;
       margin-right: 12px;
       margin-bottom: 10px;
 
@@ -2713,7 +2747,7 @@ Blog Detail Styles
       font-size: 13px;
     }
 
-    .reply {
+    .comment {
       .border-top(1px, @gray-17);
       margin-top: 22px;
       border-bottom: 0;
