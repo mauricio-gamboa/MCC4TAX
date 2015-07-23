@@ -9,6 +9,14 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1470477823219714";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <header id="top-header">
   <div class="container">
     <div class="row">
@@ -52,13 +60,19 @@
           <?php if(ot_get_option('phone_number')): ?>
           <a href="tel:<?php echo ot_get_option('phone_number') ?>" class="my-btn btn-1 show-xs"><i class="fa fa-phone"></i> <?php echo ot_get_option('phone_number') ?></a>
           <?php endif; ?>
-          
-          <?php wp_nav_menu(array( 'menu' => 'main-menu', 'container' => false, 'menu_class' => 'list-unstyled main-menu clearfix hide-xs', 'depth' => 2)); ?>
+
+          <ul class="list-unstyled main-menu clearfix hide-xs">
+            <?php wp_nav_menu(array( 'menu' => 'main-menu', 'container' => false, 'items_wrap' => '%3$s', 'depth' => 2)); ?>
+            <li><a href="#reviews-wrapper" du-smooth-scroll>Contact Us</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </nav>
 <nav id="mobile-menu" class="collapse">
-  <?php wp_nav_menu(array( 'menu' => 'main-menu', 'container' => false, 'menu_class' => 'main-menu-mobile list-unstyled', 'depth' => 1)); ?>
+  <ul class="main-menu-mobile list-unstyled">
+    <?php wp_nav_menu(array( 'menu' => 'main-menu', 'container' => false, 'items_wrap' => '%3$s', 'depth' => 1)); ?>
+    <li><a href="#contact-form" du-smooth-scroll>Contact Us</a></li>
+  </ul>
 </nav>

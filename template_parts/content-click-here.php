@@ -22,7 +22,16 @@
 
         </div>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-bg">
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-bg hide-xs">
+        <div class="click-here-item">
+          <div class="call clearfix">
+            <span class="phone-icon"><i class="fa fa-envelope"></i></span>
+            <span><span>send a message</span><br/><span class="phone"><a href="#reviews-wrapper" du-smooth-scroll>Contact Us</a></span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-bg show-xs">
         <div class="click-here-item">
           <div class="call clearfix">
             <span class="phone-icon"><i class="fa fa-envelope"></i></span>
