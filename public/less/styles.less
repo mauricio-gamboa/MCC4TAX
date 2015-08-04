@@ -450,6 +450,22 @@ Top Header Styles
 ****************************
 ***************************/
 
+.fixed-section {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  & + * {
+    margin-top: 130px;
+
+    @media @xs {
+      margin-top: 118px;
+    }
+  }
+}
+
 #top-header {
   background-color: white;
   height: 68px;
@@ -1179,6 +1195,17 @@ Client Reviews Styles
 .review-slide {
   text-align: center;
 
+  .review-content {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    height: 100px; /* Fallback for non-webkit */
+    margin: 0 auto;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   h4 {
     font-size: 20px;
     color: @blue-4;
@@ -1341,7 +1368,7 @@ Badges Styles
     font-size: 14px;
     font-weight: normal;
     margin-bottom: 10px;
-    
+
     a {
       color: @green-1;
 
@@ -1583,7 +1610,7 @@ Footer Styles
             margin-bottom: 10px;
           }
         }
-        
+
         @media @xs {
           width: 25% !important;
         }
@@ -1945,7 +1972,7 @@ About Page Styles
   #as-seen-on {
     padding-bottom: 0;
     margin-top: 45px;
-    
+
     h2 {
       .border-top(2px, @gray-13);
     }
@@ -2198,14 +2225,14 @@ About Page Styles
       .map-wrapper {
         .border(2px, white);
         height: 200px;
-        
+
         map, div[map] {
-          display:block; 
+          display: block;
           height: 100% !important;
         }
-        
+
         .fill {
-          height:100% !important;
+          height: 100% !important;
         }
       }
     }
@@ -2243,7 +2270,7 @@ About Page Styles
         > div {
           float: none;
           width: auto;
-          
+
           p {
             font-size: 14px;
             line-height: 20px;
@@ -2325,6 +2352,17 @@ About Page Styles
       color: @green-1;
       margin-right: 10px;
     }
+  }
+
+  .review-content {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    height: 96px; /* Fallback for non-webkit */
+    margin: 0 auto;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -2544,7 +2582,7 @@ Blog Styles
       float: none;
       width: auto;
     }
-    
+
     h3 {
       color: @gray-8;
       font-size: 21px;
@@ -2601,7 +2639,7 @@ Blog Styles
 
     .nav-links {
       text-align: center;
-      
+
       .page-numbers {
         font-family: 'Lato-Regular';
         border-radius: 4px;
