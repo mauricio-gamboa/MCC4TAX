@@ -17,7 +17,8 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1470477823219714";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<header id="top-header">
+<div class="fixed-section">
+  <header id="top-header">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -76,3 +77,4 @@
     <li><a href="#contact-form" du-smooth-scroll>Contact Us</a></li>
   </ul>
 </nav>
+</div>

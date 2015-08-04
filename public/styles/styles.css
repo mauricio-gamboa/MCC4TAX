@@ -267,6 +267,21 @@ Buttons Styles
 Top Header Styles
 ****************************
 ***************************/
+.fixed-section {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.fixed-section + * {
+  margin-top: 130px;
+}
+@media (max-width: 767px) {
+  .fixed-section + * {
+    margin-top: 118px;
+  }
+}
 #top-header {
   background-color: white;
   height: 68px;
@@ -964,6 +979,18 @@ Client Reviews Styles
 }
 .review-slide {
   text-align: center;
+}
+.review-slide .review-content {
+  display: block;
+  /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: 100px;
+  /* Fallback for non-webkit */
+  margin: 0 auto;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .review-slide h4 {
   font-size: 20px;
@@ -2008,6 +2035,18 @@ About Page Styles
 .testimonials h4 span {
   color: #67be66;
   margin-right: 10px;
+}
+.testimonials .review-content {
+  display: block;
+  /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: 96px;
+  /* Fallback for non-webkit */
+  margin: 0 auto;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .testimonials-slider .testimonial p {
   font-size: 15px;
