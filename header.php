@@ -29,13 +29,13 @@
           <a href="#reviews-wrapper" du-smooth-scroll class="my-btn btn-1">get a free estimate</a>
         </div>
         
-        <?php if(ot_get_option('phone_number')): ?>
+        <?php if(ot_get_option('phone_number') && ot_get_option('phone_number_numbers')): ?>
         <div class="call clearfix hide-m hide-s hide-xs">
           <span class="phone-icon"><i class="fa fa-phone"></i></span>
           <span>
             <span>call free toll</span>
             <br/>
-            <span class="phone"> <a href="tel:<?php echo ot_get_option('phone_number') ?>"><?php echo ot_get_option('phone_number') ?></a></span>
+            <span class="phone"> <a href="tel:<?php echo ot_get_option('phone_number_numbers') ?>"><?php echo ot_get_option('phone_number') ?></a></span>
           </span>
         </div>
         <?php endif; ?>
@@ -57,8 +57,8 @@
             <i class="fa fa-bars"></i>
           </div>
           
-          <?php if(ot_get_option('phone_number')): ?>
-          <a href="tel:<?php echo ot_get_option('phone_number') ?>" class="my-btn btn-1 show-xs"><i class="fa fa-phone"></i> <?php echo ot_get_option('phone_number') ?></a>
+          <?php if(ot_get_option('phone_number') && ot_get_option('phone_number_numbers')): ?>
+          <a href="tel:<?php echo ot_get_option('phone_number_numbers') ?>" class="my-btn btn-1 show-xs"><i class="fa fa-phone"></i> <?php echo ot_get_option('phone_number') ?></a>
           <?php endif; ?>
 
           <ul class="list-unstyled main-menu clearfix hide-xs">
