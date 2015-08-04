@@ -16,7 +16,7 @@
               <?php the_content(); ?>
 
               <?php if(get_field('client_name') && get_field('client_company')): ?>
-              <p><strong><?php the_field('client_name'); ?></strong> from <strong><?php the_field('client_company'); ?></strong></p>
+              <p><strong><a href="<?php the_field('client_company'); ?>" target="_blank"><?php the_field('client_name'); ?></a></strong></p>
               <?php endif; ?>
 
               <p><img src="<?php bloginfo('template_directory'); ?>/public/images/rating.png" alt=""/></p>
