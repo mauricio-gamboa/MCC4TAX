@@ -34,7 +34,7 @@
         <div class="call clearfix hide-m hide-s hide-xs">
           <span class="phone-icon"><i class="fa fa-phone"></i></span>
           <span>
-            <span>call free toll</span>
+            <span>Call Toll Free</span>
             <br/>
             <span class="phone"> <a href="tel:<?php echo ot_get_option('phone_number_numbers') ?>"><?php echo ot_get_option('phone_number') ?></a></span>
           </span>
