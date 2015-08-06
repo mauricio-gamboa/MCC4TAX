@@ -952,11 +952,11 @@ As Seen On Styles
   text-align: center;
   line-height: 81px;
   float: left;
-  width: 16.66%;
 }
 @media (max-width: 767px) {
   .aso-wrapper .aso {
-    width: 50%;
+    width: 50% !important;
+    min-height: 82px;
   }
 }
 .aso-wrapper .aso img {
