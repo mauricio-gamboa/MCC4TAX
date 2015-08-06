@@ -15,7 +15,7 @@
           <div class="how-much-owe clearfix hide-xs">
             <h5>How much do you owe?</h5>
 
-            <div class="btn-group">
+<!--             <div class="btn-group">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span> $25,000 - $50,000
               </button>
               <ul class="dropdown-menu">
@@ -24,9 +24,9 @@
                 <li><a href="#">Option</a></li>
                 <li><a href="#">Option</a></li>
               </ul>
-            </div>
+            </div> -->
 
-            <a href="" class="my-btn btn-1">Get Started <i class="fa fa-arrow-right"></i></a>
+            <a href="#reviews-wrapper" du-smooth-scroll class="my-btn btn-1">Get Started <i class="fa fa-arrow-right"></i></a>
           </div>
           
           <?php if(ot_get_option('lawyer_s_image')): ?>

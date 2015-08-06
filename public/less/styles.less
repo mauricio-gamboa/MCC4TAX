@@ -246,7 +246,12 @@ body {
 }
 
 a {
-  &:hover {
+  &:link
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
     text-decoration: none;
   }
 }
@@ -372,7 +377,12 @@ Buttons Styles
   text-align: center;
   border: none;
 
-  &:hover {
+  &:link
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
     color: white;
     text-decoration: none;
   }
@@ -428,17 +438,19 @@ Buttons Styles
 
 .my-link {
 
-  &:hover {
-    text-decoration: none;
-  }
-
   &.link-1 {
     color: @green-1;
     font-size: 15px;
     font-family: 'proxima_nova_bold';
     text-transform: uppercase;
 
-    &:hover {
+    &:link
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      text-decoration: none;
       color: @green-2;
     }
   }
@@ -917,7 +929,8 @@ Header Home Styles
       }
 
       .btn-1 {
-        width: 182px;
+        //width: 182px;
+        width: 100%;
       }
     }
 
@@ -1195,17 +1208,6 @@ Client Reviews Styles
 .review-slide {
   text-align: center;
 
-  .review-content {
-    display: block; /* Fallback for non-webkit */
-    display: -webkit-box;
-    height: 100px; /* Fallback for non-webkit */
-    margin: 0 auto;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   h4 {
     font-size: 20px;
     color: @blue-4;
@@ -1352,7 +1354,8 @@ Badges Styles
     height: 48px;
 
     @media @medium {
-      width: 160px;
+      width: 150px;
+      height: auto;
     }
 
     @media @small, @xs {
@@ -2352,17 +2355,6 @@ About Page Styles
       color: @green-1;
       margin-right: 10px;
     }
-  }
-
-  .review-content {
-    display: block; /* Fallback for non-webkit */
-    display: -webkit-box;
-    height: 96px; /* Fallback for non-webkit */
-    margin: 0 auto;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 
