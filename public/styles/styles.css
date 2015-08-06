@@ -130,7 +130,11 @@ body {
   font-family: 'proxima_nova_regular';
   color: #555555;
 }
-a:hover {
+a:link a:visited,
+a:hover,
+a:active,
+a:focus {
+  outline: none;
   text-decoration: none;
 }
 .logo {
@@ -205,7 +209,11 @@ Buttons Styles
   text-align: center;
   border: none;
 }
-.my-btn:hover {
+.my-btn:link .my-btn:visited,
+.my-btn:hover,
+.my-btn:active,
+.my-btn:focus {
+  outline: none;
   color: white;
   text-decoration: none;
 }
@@ -250,16 +258,18 @@ Buttons Styles
 .my-btn.btn-3:hover {
   background-position: 0 -69px;
 }
-.my-link:hover {
-  text-decoration: none;
-}
 .my-link.link-1 {
   color: #67be66;
   font-size: 15px;
   font-family: 'proxima_nova_bold';
   text-transform: uppercase;
 }
-.my-link.link-1:hover {
+.my-link.link-1:link .my-link.link-1:visited,
+.my-link.link-1:hover,
+.my-link.link-1:active,
+.my-link.link-1:focus {
+  outline: none;
+  text-decoration: none;
   color: #5ba65a;
 }
 /***************************
@@ -735,7 +745,7 @@ Header Home Styles
   width: 212px;
 }
 #header-home .header-home .how-much-owe .btn-1 {
-  width: 182px;
+  width: 100%;
 }
 #header-home .header-home .button-wrapper {
   position: absolute;
@@ -980,18 +990,6 @@ Client Reviews Styles
 .review-slide {
   text-align: center;
 }
-.review-slide .review-content {
-  display: block;
-  /* Fallback for non-webkit */
-  display: -webkit-box;
-  height: 100px;
-  /* Fallback for non-webkit */
-  margin: 0 auto;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .review-slide h4 {
   font-size: 20px;
   color: #1b3e86;
@@ -1115,7 +1113,8 @@ Badges Styles
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .my-form img:not(.ajax-loader) {
-    width: 160px;
+    width: 150px;
+    height: auto;
   }
 }
 @media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
@@ -2035,18 +2034,6 @@ About Page Styles
 .testimonials h4 span {
   color: #67be66;
   margin-right: 10px;
-}
-.testimonials .review-content {
-  display: block;
-  /* Fallback for non-webkit */
-  display: -webkit-box;
-  height: 96px;
-  /* Fallback for non-webkit */
-  margin: 0 auto;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .testimonials-slider .testimonial p {
   font-size: 15px;
