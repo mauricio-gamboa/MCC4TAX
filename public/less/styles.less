@@ -510,6 +510,11 @@ Top Header Styles
     float: right;
     .border-right(1px, @gray-15);
     height: 68px;
+
+    @media @small {
+      padding-right: 0;
+      border-right: none;
+    }
   }
 
   .estimate {

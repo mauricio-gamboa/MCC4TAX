@@ -31,7 +31,7 @@
         </div>
         
         <?php if(ot_get_option('phone_number') && ot_get_option('phone_number_numbers')): ?>
-        <div class="call clearfix hide-m hide-s hide-xs">
+        <div class="call clearfix hide-xs">
           <span class="phone-icon"><i class="fa fa-phone"></i></span>
           <span>
             <span>Call Toll Free</span>
@@ -41,7 +41,7 @@
         </div>
         <?php endif; ?>
         
-        <div class="ratings hide-xs">
+        <div class="ratings hide-m hide-s hide-xs">
           <img src="<?php bloginfo('template_directory'); ?>/public/images/ratings.png" alt=""/>
         </div>
       </div>

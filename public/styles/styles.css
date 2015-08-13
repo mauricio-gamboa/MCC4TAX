@@ -325,6 +325,12 @@ Top Header Styles
   border-right: 1px solid #ebebeb;
   height: 68px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  #top-header .call {
+    padding-right: 0;
+    border-right: none;
+  }
+}
 #top-header .estimate {
   float: right;
   margin-left: 30px;
